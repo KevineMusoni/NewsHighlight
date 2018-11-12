@@ -10,9 +10,10 @@ github link :git@github.com:KevineMusoni/NewsHighlight.git
 *
 *
 ## Behavior Driven Development
-| input             | output        |
-|---------------    |---------------:|
-|                   |               |
+| input             | output           |
+|---------------    |--------------- : |
+| click read more   | view full article|
+|choose news category| view article|
 
 ## Technologies Used
 {Python3.6}

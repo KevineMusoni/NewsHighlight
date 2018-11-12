@@ -12,7 +12,7 @@
                 <p>{{article.content}}</p>
                 <h3>author: <strong>{{article.author}}</strong></h3>
                 <div class="btn-container">
-                    <a href="{{article.url}}" class="button btn btn-primary btn-sm">view</a>
+                    <a href="{{article.url}}" class="button btn btn-primary btn-sm">read more...</a>
                 </div>
             </div>
             <hr>
@@ -31,8 +31,9 @@
             <h2 class="source-name">{{source.name}}</h2>
             <p>{{source.description}}</p>
             <div class="btn-container">
-                <a class="button btn btn-primary btn-sm" href="/sources/articles/{{source.id}}" >view</a>
+                <a class="button btn btn-primary btn-sm" href="/sources/articles/{{source.id}}" >readmore...</a>
             </div>
+        
         </div>
         {% endfor %}
     </div>
