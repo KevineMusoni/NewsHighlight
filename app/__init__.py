@@ -12,6 +12,7 @@ def create_app(config_name):
 
     bootstrap.init_app(app)
     from .main import main as main_blueprint
+    # registering blueprint
     app.register_blueprint(main_blueprint)
 
     from .requests import configure_request
