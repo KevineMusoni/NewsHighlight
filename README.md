@@ -6,14 +6,14 @@
 ## Setup/Installation Requirements 
 github link :git@github.com:KevineMusoni/NewsHighlight.git
 ## step-by step guide
-*  
-*
+*  click on the news category
+*  click read more to read the full article
 *
 ## Behavior Driven Development
 | input              | output           |
 |---------------     |---------------   |
-| click read more    | view full article|
-|choose news category| view article     |
+| click read more    | read full article|
+|choose news category| read article     |
 
 ## Technologies Used
 {Python3.6}
