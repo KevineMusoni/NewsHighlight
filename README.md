@@ -5,6 +5,10 @@
 {Cosmos Highlights uses news api to track news from different sources to provide to it's readers}
 ## Setup/Installation Requirements 
 github link :git@github.com:KevineMusoni/NewsHighlight.git
+Deployed on Heroku:
+https://cosmosnews.herokuapp.com/
+https://git.heroku.com/cosmosnews.git
+
 ## step-by step guide
 *  click on the news category
 *  click read more to read the full article
