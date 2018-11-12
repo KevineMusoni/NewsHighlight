@@ -1,19 +1,19 @@
 import urllib.request,json
 from .models import Article,Source
-# api initialise
+# api initialised
 
 api_key = None
 sources_api = None
 news_source_api = None
 search_api = None
-headlines_api = None
+top_headlines_api = None
 
 def configure_request(app):
 
-    global api_key,sources_api,news_source_api,headlines_api
+    global api_key,sources_api,news_source_api,top_headlines_api
     api_key = app.config["API_KEY"]
     sources_api = app.config["SOURCES_API"]
-    headlines_api = app.config["HEADLINES_API"]
+    top_headlines_api = app.config["TOP_HEADLINES_API"]
     news_source_api  = app.config["NEWS_SOURCE_API"]
     search_api = app.config["SEARCH_API"]
 
@@ -49,21 +49,6 @@ def news_sources(sources):
 
     return results
 
-def get_headlines():
-
-    headlines_url = headlines_api.format(api_key)
-
-    with urllib.request.urlopen(headlines_url) as url:
-        headlines_data = url.read()
-        headlines_response = json.loads(headlines_data)
-
-        headlines = None
-        if headlines_response["articles"]:
-            headlines_list = headlines_response["articles"]
-            headlines = get_articles(headlines_list)
-
-    return headlines
-
 def get_sources(category):
 
     sources_url = sources_api.format(category,api_key)
@@ -79,21 +64,36 @@ def get_sources(category):
 
     return sources
 
-def get_sources_headlines(id):
+def get_sources_top_headlines(id):
 
     news_source_url = news_source_api.format(id,api_key)
 
     with urllib.request.urlopen(news_source_url) as url:
-        headlines_data = url.read()
-        headlines_response = json.loads(headlines_data)
+        top_headlines_data = url.read()
+        top_headlines_response = json.loads(top_headlines_data)
 
-        headlines = None
-        if headlines_response["articles"]:
-            headlines_list = headlines_response["articles"]
-            headlines = get_articles(headlines_list)
+        top_headlines = None
+        if top_headlines_response["articles"]:
+            top_headlines_list = top_headlines_response["articles"]
+            top_headlines = get_articles(top_headlines_list)
 
-    return headlines
-        
+    return top_headlines
+    
+def get_top_headlines():
+
+    top_headlines_url = top_headlines_api.format(api_key)
+
+    with urllib.request.urlopen(top_headlines_url) as url:
+        top_headlines_data = url.read()
+        top_headlines_response = json.loads(top_headlines_data)
+
+        top_headlines = None
+        if top_headlines_response["articles"]:
+            top_headlines_list = top_headlines_response["articles"]
+            top_headlines = get_articles(top_headlines_list)
+
+    return top_headlines
+
 def search_articles(search_name):
 
     search_url = search_api.format(search_name,api_key)
