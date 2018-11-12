@@ -6,7 +6,7 @@
 ## Setup/Installation Requirements 
 github link :git@github.com:KevineMusoni/NewsHighlight.git
 Deployed on Heroku:
-https://cosmosnews.herokuapp.com/
+https://cosmosnews.herokuapp.com/ |
 https://git.heroku.com/cosmosnews.git
 
 ## step-by step guide
