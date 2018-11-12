@@ -2,13 +2,12 @@
 ### {This is a webapplication that will enable users to preview news from different sources},12/11/2018
 ### By **{Kevine Musoni}**
 ## Description
-{}
+{Cosmos Highlights uses news api to track news from different sources to provide to it's readers}
 ## Setup/Installation Requirements 
 github link :git@github.com:KevineMusoni/NewsHighlight.git
 ## step-by step guide
 *  click on the news category
 *  click read more to read the full article
-*
 ## Behavior Driven Development
 | input              | output           |
 |---------------     |---------------   |
