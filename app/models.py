@@ -1,3 +1,4 @@
+# classes created for api objects
 class Article:
     def __init__(self,author,title,description,url,image_url,publish_date,content,source):
         self.author = author
