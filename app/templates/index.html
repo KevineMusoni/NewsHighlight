@@ -4,9 +4,9 @@
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
 {% endblock %}
-
+<!-- news content -->
 {% import "macros.html" as macro%}
 {% block content%}
-<h1 id="sub-title" style="text-align:center">Trending News</h1>
+<h3 id="sub-title" style="text-align:center">Trending News</h3>
 {{macro.display_articles(headlines)}}
 {% endblock %}

@@ -33,7 +33,7 @@ def get_articles(articles):
 
     return results
 
-def process_sources(sources):
+def news_sources(sources):
     results = []
 
     for source in sources:
@@ -73,7 +73,7 @@ def get_sources(category):
         sources = None
         if sources_response["sources"]:
             sources_list = sources_response["sources"]
-            sources = process_sources(sources_list)
+            sources = news_sources(sources_list)
 
     return sources
 
