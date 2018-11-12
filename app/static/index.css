@@ -1,3 +1,7 @@
 #heading{
     text-align: center;
 }
+#navbar{
+    background-color:gray;
+    width: 100vw;
+}
