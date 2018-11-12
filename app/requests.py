@@ -1,11 +1,13 @@
 import urllib.request,json
 from .models import Article,Source
+# api initialise
 
 api_key = None
 sources_api = None
-headlines_api = None
 news_source_api = None
 search_api = None
+headlines_api = None
+
 def configure_request(app):
 
     global api_key,sources_api,news_source_api,headlines_api
