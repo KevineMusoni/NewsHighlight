@@ -1,0 +1,41 @@
+{% macro display_articles(articles)%}
+<div class="container">
+    <div class="articles">
+        {% for article in articles %}
+        <div class="col-sm-10 article-container">
+            <div class="article">
+                <h2 class="article-header">{{article.title}}</h2>
+                <h4>Date Published: {{article.publish_date}}</h4>
+                <div class="img-container">
+                    <img src="{{article.image_url}}" class="img-responsive">
+                </div>
+                <p>{{article.content}}</p>
+                <h3>author: <strong>{{article.author}}</strong></h3>
+                <div class="btn-container">
+                    <a href="{{article.url}}" class="button btn btn-primary btn-sm">view</a>
+                </div>
+            </div>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}
+
+{% macro display_sources(sources)%}
+<div class="container">
+    {% for row in sources | batch(3) %}
+    <div>
+        {% for source in row %}
+        <div class="col-md-3 source-card">
+            <h2 class="source-name">{{source.name}}</h2>
+            <p>{{source.description}}</p>
+            <div class="btn-container">
+                <a class="button btn btn-primary btn-sm" href="/sources/articles/{{source.id}}" >view</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}

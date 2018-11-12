@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- <title>Page Title</title> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1 id="heading" style="text-align:center">COSMOS HIGHLIGHTS</h1>
+<div style="border-radius: 0;z-index:1;" class="navbar" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/" style="color:black">Home</a></li>
+                <li><a href="/sources/business" style="color:black">World Business</a></li>
+                <li><a href="/sources/general" style="color:black">General News</a></li>
+                <li><a href="/sources/entertainment" style="color:black">Entertainment</a></li>
+                <li><a href="/sources/sports" style="color:black">Sports</a></li>
+                <li><a href="/sources/science" style="color:black">Science</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
